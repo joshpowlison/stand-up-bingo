@@ -1,0 +1,103 @@
+body
+{
+	margin:0;
+	padding:0;
+	width:100%;
+	display:flex;
+	justify-content:center;
+	
+	background-color:black;
+	color:white;
+	
+	font-family:Arial;
+}
+
+h1, h2
+{
+	text-align:center;
+}
+
+p
+{
+	text-align:center;
+}
+
+h1 img
+{
+	height:1em;
+}
+
+#bingo-container
+{
+	max-width:100%;
+	max-height:80vh;
+	border-radius:6em;
+	overflow:hidden;
+	box-shadow: 0em 0em 0em .25em #ffffff;
+	margin: auto;
+}
+
+.bingo-row
+{
+	display:block;
+	clear:both;
+}
+
+.bingo-cell
+{
+	width:20%;
+	height:10em;
+	display:flex;
+	border:1px solid white;
+	box-sizing:border-box;
+	text-align:center;
+	align-items:center;
+	justify-content:center;
+	float:left;
+	word-break:break-word;
+	
+	transition:background-size .5s, transform .5s, background-color .5s;
+	background-size:0em;
+	background-position:center;
+	background-repeat:no-repeat;
+	
+	cursor:pointer;
+	
+	transform:scale(1);
+	z-index:0;
+	
+	position:relative;
+	
+	background-color:black;
+}
+
+.bingo-cell:hover
+{
+	transform:scale(1.1);
+	z-index:1;
+}
+
+.bingo-cell:active
+{
+	background-color:#40c327;
+	transform:scale(0.9);
+	z-index:1;
+}
+
+.bingo-cell p
+{
+	background-color:#00000099;
+	box-sizing:border-box;
+	padding:.5em;
+	margin:.5em;
+	pointer-events:none;
+	font-weight:bold;
+	font-size:1.125em;
+	user-select:none;
+}
+
+.selected
+{
+	background-color:#40c327;
+	background-size:8em;
+}
